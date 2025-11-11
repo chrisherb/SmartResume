@@ -19,11 +19,6 @@ This tool requires the following system-level dependencies:
 2. **TeX Live Full** - Complete LaTeX distribution
 3. **Core Fonts** (recommended for Linux users) - Windows core fonts for better compatibility
 
-### Python Dependencies
-
-- Python >= 3.10
-- pypandoc >= 1.15
-
 ## Installation
 
 ### 1. Install System Dependencies
@@ -59,22 +54,6 @@ choco install miktex
 # MiKTeX: https://miktex.org/download
 ```
 
-### 2. Install Python Package
-
-Clone the repository and install dependencies:
-
-```bash
-git clone <repository-url>
-cd smartresume
-pip install -e .
-```
-
-Or using uv (recommended):
-
-```bash
-uv sync
-```
-
 ## Usage
 
 ### Basic Usage
@@ -85,13 +64,8 @@ uv sync
 
    Using default input/output paths:
    
-   ```bash
-   # With pip installation
-   python main.py
+   ./build.sh
    
-   # Or with uv
-   uv run main.py
-   ```
 
 3. **Output**: The generated PDF will be saved to `output/resume.pdf`.
 
@@ -101,13 +75,10 @@ You can specify custom input and output file paths using command-line arguments:
 
 ```bash
 # Using short options
-python main.py -i path/to/your/resume.md -o path/to/output.pdf
+./build.sh -i path/to/your/resume.md -o path/to/output.pdf
 
 # Using long options
-python main.py --input custom_resume.md --output custom_output.pdf
-
-# With uv
-uv run main.py -i markdown/custom.md -o output/custom.pdf
+./build.sh --input custom_resume.md --output custom_output.pdf
 ```
 
    Here is an example PDF resume with the default template:
