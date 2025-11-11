@@ -43,17 +43,6 @@ brew install --cask mactex
 brew install --cask basictex
 ```
 
-#### Windows:
-```bash
-# Using Chocolatey
-choco install pandoc
-choco install miktex
-
-# Or download installers from:
-# Pandoc: https://pandoc.org/installing.html
-# MiKTeX: https://miktex.org/download
-```
-
 ## Usage
 
 ### Basic Usage
